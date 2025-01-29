@@ -462,5 +462,5 @@ client2.on("messageCreate", async (message) => {
   }
 });
 
-client1.login(process.env.TOKEN1);
-client2.login(process.env.TOKEN2)
+client1.login("MTI2MDUzOTA4OTgyOTIzNjgxMQ.GIdW_M.dgcolOLP2wCggtupjkOaZliOx3fSsipuocZbfI");
+client2.login("OTgzOTk0MTkxODQ1NjYyNzQx.GNfoCk.mZxOPHju86nms4otVYPcd6SnAbaUASkFf3vz4A")
