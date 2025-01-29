@@ -1,5 +1,5 @@
 // Code by PhucXingum!!!!
-
+require('dotenv').config();
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 1;
 const { exec } = require("child_process");
 
