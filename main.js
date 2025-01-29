@@ -95,8 +95,8 @@ app.get('/api-status-webhock-notify', (req, res) => {
   res.status(200).end();
 })
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Server is running on port ${process.env.PORT || 3000}`);
+app.listen(3000, () => {
+  console.log(`Server is running on port 3000`);
 });
 
 const client1 = new Client({
