@@ -462,5 +462,5 @@ client2.on("messageCreate", async (message) => {
   }
 });
 
-client1.login(token1);
-client2.login(token2)
+client1.login(process.env.TOKEN1);
+client2.login(process.env.TOKEN2)
