@@ -94,8 +94,8 @@ app.get('/api-status-webhock-notify', (req, res) => {
   res.status(200).end();
 })
 
-app.listen(11169, () => {
-  console.log(`Server is running on port 11169`);
+app.listen(80, () => {
+  console.log(`Server is running on port 80`);
 });
 
 const client1 = new Client({
