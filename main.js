@@ -6,8 +6,8 @@ const { exec } = require("child_process");
 var avtOwner =
   "https://cdn.discordapp.com/avatars/1011242519218094121/a_be8cda67baf5745dff9c5519b83761b9.gif?size=1024";
 var nameOwner = "! PhucXingum";
-var name_server = " | Convergence Of Essence";
-var invite_discord = "https://discord.gg/BRy9G4SFnK";
+var name_server = " | King Server";
+var invite_discord = "https://discord.gg/sNCMtd8h4G";
 
 (ping_role_id = {
   boss: "",
@@ -35,17 +35,16 @@ var invite_discord = "https://discord.gg/BRy9G4SFnK";
   });
 
 const mirage_azu =
-  "https://discord.com/api/webhooks/1333835733672263822/hHQvcjcs6C7ROPJ-MVyuxljB6TCo9LZU0R_90ITlMm2N9y4B7O6N5DjgTiqlVbLEaACA";
-const rare_boss =
-  "https://discord.com/api/webhooks/1333836103341572188/baBwyPb_CDnbKzNAdJtc644Zv4oFfYIUZPvtNfSdJNw-Hzc43wuJNIE248ii-3ddFzgr";
+  "https://discord.com/api/webhooks/1345715489686552658/5iSnW6NQGdXb64F-57iy9Ou1zBCiyhdZLcIJU32XfSAVoHbiVSQKd5zpdSVA9IIWatUo";
+const rare_boss ="https://discord.com/api/webhooks/1345735557510074441/dPlQUh_mDeIui46zdL69K79Kc6-xTAvRdh9a2lyFrdJa1Ino-mYQmBE-agaUnmn3B7pA";
 const fullmoon =
-  "https://discord.com/api/webhooks/1333834595065397382/mqahr2bX3d267VawhN4WnJeWrqnAqbyRhWHKX-HjMAi6oR7eIFdMr0gQQoUq2I3rLq-B";
+  "https://discord.com/api/webhooks/1345730957457625138/UtzkYRbruF67fymwC0sHxEEA2-LSTx1D5gqPYZcRmfbeUmbLl_t02T73S3iSCeRv7Ihh";
 const near_full_moon =
-  "https://discord.com/api/webhooks/1333835519494328342/OSnLSgd4i3wFsU7KG0EsEGVRHlrxwK_A2hWuieh89lORkUK8QO8ExTXLVBt4H5fD4FQA";
+  "https://discord.com/api/webhooks/1345734423051636797/-U6HfNVg7-OPSE-yXjSemmn9MWKSXeSsNy_QtypjT5mRb6XfeS_G5OK8jdOZEoQFOGYc";
 const sword =
-  "https://discord.com/api/webhooks/1333836275358240829/ZuUca5TRCAk9OtBZDucpBNc_GHQ1ylFFFDiA5veIMOQzQOSfA3NtpzUR4_9Yhy6RYLN8";
+  "https://discord.com/api/webhooks/1345444322304065556/ylU3r_nHVMUmK27Y7zLESpaNR4U3DRiDyxCyNU74P8DQ21zfmyinpMtPzzumShJBl2-W";
 const haki_legend =
-  "https://discord.com/api/webhooks/1285721091326611487/Pr3PfJpMQGxhaPKI8K_5dwyW2fA_S0eqVSH_tcnA7r8sxErBOZBU2WHr7LXw3aiv8np-";
+  "https://discord.com/api/webhooks/1345444224333774868/7FUIXUolY10w-Yz4AoRoi6QbJ6JNjV-F-xbPGa0zho1bKev3A5tdxLF7mv_aQ5b7eIeQ";
 const king_legacy = 
   "https://discord.com/api/webhooks/1333839004260499538/TMTJE8Wtw64DFVDeflT1L9CDiZAL5F0fJbmk3roSLDs2mB5zyRpcLbJxA_qbKiw5_WqH";
 
@@ -95,8 +94,8 @@ app.get('/api-status-webhock-notify', (req, res) => {
   res.status(200).end();
 })
 
-app.listen(3000, () => {
-  console.log(`Server is running on port 3000`);
+app.listen(11169, () => {
+  console.log(`Server is running on port 11169`);
 });
 
 const client1 = new Client({
@@ -358,109 +357,109 @@ client1.on("messageCreate", async (message) => {
   }
 });
 
-client2.on("messageCreate", async (message) => {
-  const channel = message.channelId;
-  if (channel == "1088023824555053097") {
-    const data = message.embeds[0].fields;
-    let job_id = data[3].value.replace(/`/g, "");
-    let script_join = data[4].value.replace(/`/g, "");
-    const webhook = new WebhookClient({
-      url: haki_legend,
-    });
-    webhook.send({
-      content: ping_role_id.haki.legend,
-      embeds: [
-        new EmbedBuilder()
-          .setTitle("Haki Legendary" + name_server)
-          .setURL(invite_discord)
-          .addFields(
-            { name: "**[🌈] __Color Haki:__**", value: data[0].value },
-            {
-              name: "**[🌏] __World (Sea):__**",
-              value: data[1].value,
-            },
-            {
-              name: "**[👤] __Players In Server:__**",
-              value: data[2].value,
-            },
-            {
-              name: "**[🔗] __Job ID:__**",
-              value: "```" + job_id + "```",
-            },
-            {
-              name: "**[🔗] __Job ID (Mobile):__**",
-              value: data[3].value,
-            },
-            {
-              name: "**[📜] __Script Join:__**",
-              value: "```" + data[4].value + "```",
-            },
-            {
-              name: "**[📜] __Script Join (Mobile):__**",
-              value:
-                `game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","` +
-                job_id +
-                `")`,
-            }
-          )
-          .setTimestamp(Date.now())
-          .setColor("ffffff")
-          .setFooter({
-            text: `Created By: @${nameOwner}` + " " + invite_discord,
-            iconURL: avtOwner,
-          }),
-      ],
-    });
-  } else if (channel == "1184516926651768954") {
-    // king legacy maru
-    const data = message.embeds[0].fields;
-    let job_id = data[3].value.replace(/`/g, "");
-    let script_join = data[4].value.replace(/`/g, "");
-    const webhook = new WebhookClient({
-      url: king_legacy
-    });
-    webhook.send({
-      embeds: [
-        new EmbedBuilder()
-          .setTitle("ɴᴏᴛɪғʏ ʙᴏss ᴋɪɴɢ ʟᴇɢᴀᴄʏ ")
-          .setURL(invite_discord)
-          .addFields(
-            { name: "**[🐯] - __Boss Name :__**", value: data[2].value },
-            {
-              name: "**[⏳] - __Server Time :__**",
-              value: data[0].value,
-            },
-            {
-              name: "**[👥] - __Players In Server :__**",
-              value: data[1].value,
-            },
-            {
-              name: "**[🔗] - __Job ID:__**",
-              value: "```" + data[3].value + "```",
-            },
-            {
-              name: "**[🔗] - __Job ID (Mobile):__**",
-              value: data[3].value,
-            },
-            {
-              name: "**[📋] - __Script Join:__**",
-              value: "```" + data[4].value + "```",
-            },
-            {
-              name: "**[📋] - __Script Join (Mobile):__**",
-              value: data[4].value,
-            }
-          )
-          .setTimestamp(Date.now())
-          .setColor("ffffff")
-          .setFooter({
-            text: `Created By: @${nameOwner}` + " " + invite_discord,
-            iconURL: avtOwner,
-          }),
-      ],
-    });
-  }
-});
+// client2.on("messageCreate", async (message) => {
+//   const channel = message.channelId;
+//   if (channel == "1088023824555053097") {
+//     const data = message.embeds[0].fields;
+//     let job_id = data[3].value.replace(/`/g, "");
+//     let script_join = data[4].value.replace(/`/g, "");
+//     const webhook = new WebhookClient({
+//       url: haki_legend,
+//     });
+//     webhook.send({
+//       content: ping_role_id.haki.legend,
+//       embeds: [
+//         new EmbedBuilder()
+//           .setTitle("Haki Legendary" + name_server)
+//           .setURL(invite_discord)
+//           .addFields(
+//             { name: "**[🌈] __Color Haki:__**", value: data[0].value },
+//             {
+//               name: "**[🌏] __World (Sea):__**",
+//               value: data[1].value,
+//             },
+//             {
+//               name: "**[👤] __Players In Server:__**",
+//               value: data[2].value,
+//             },
+//             {
+//               name: "**[🔗] __Job ID:__**",
+//               value: "```" + job_id + "```",
+//             },
+//             {
+//               name: "**[🔗] __Job ID (Mobile):__**",
+//               value: data[3].value,
+//             },
+//             {
+//               name: "**[📜] __Script Join:__**",
+//               value: "```" + data[4].value + "```",
+//             },
+//             {
+//               name: "**[📜] __Script Join (Mobile):__**",
+//               value:
+//                 `game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","` +
+//                 job_id +
+//                 `")`,
+//             }
+//           )
+//           .setTimestamp(Date.now())
+//           .setColor("ffffff")
+//           .setFooter({
+//             text: `Created By: @${nameOwner}` + " " + invite_discord,
+//             iconURL: avtOwner,
+//           }),
+//       ],
+//     });
+//   } else if (channel == "1184516926651768954") {
+//     // king legacy maru
+//     const data = message.embeds[0].fields;
+//     let job_id = data[3].value.replace(/`/g, "");
+//     let script_join = data[4].value.replace(/`/g, "");
+//     const webhook = new WebhookClient({
+//       url: king_legacy
+//     });
+//     webhook.send({
+//       embeds: [
+//         new EmbedBuilder()
+//           .setTitle("ɴᴏᴛɪғʏ ʙᴏss ᴋɪɴɢ ʟᴇɢᴀᴄʏ ")
+//           .setURL(invite_discord)
+//           .addFields(
+//             { name: "**[🐯] - __Boss Name :__**", value: data[2].value },
+//             {
+//               name: "**[⏳] - __Server Time :__**",
+//               value: data[0].value,
+//             },
+//             {
+//               name: "**[👥] - __Players In Server :__**",
+//               value: data[1].value,
+//             },
+//             {
+//               name: "**[🔗] - __Job ID:__**",
+//               value: "```" + data[3].value + "```",
+//             },
+//             {
+//               name: "**[🔗] - __Job ID (Mobile):__**",
+//               value: data[3].value,
+//             },
+//             {
+//               name: "**[📋] - __Script Join:__**",
+//               value: "```" + data[4].value + "```",
+//             },
+//             {
+//               name: "**[📋] - __Script Join (Mobile):__**",
+//               value: data[4].value,
+//             }
+//           )
+//           .setTimestamp(Date.now())
+//           .setColor("ffffff")
+//           .setFooter({
+//             text: `Created By: @${nameOwner}` + " " + invite_discord,
+//             iconURL: avtOwner,
+//           }),
+//       ],
+//     });
+//   }
+// });
 
-client1.login("MTI2MDUzOTA4OTgyOTIzNjgxMQ.GIdW_M.dgcolOLP2wCggtupjkOaZliOx3fSsipuocZbfI");
-client2.login("OTgzOTk0MTkxODQ1NjYyNzQx.GNfoCk.mZxOPHju86nms4otVYPcd6SnAbaUASkFf3vz4A")
+client1.login("MTE5MzEwMjE3NjE0NzQ4ODc2OQ.GuNsDE.t9ppBSoIYLsQ9bWL20MpP7rmOdm_FaGyGNXF40");
+// client2.login("OTgzOTk0MTkxODQ1NjYyNzQx.GNfoCk.mZxOPHju86nms4otVYPcd6SnAbaUASkFf3vz4A")
